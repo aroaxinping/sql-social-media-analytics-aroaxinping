@@ -108,9 +108,9 @@ SELECT
     ROUND(er_medio, 2)      AS er_medio,
     reels,
     CASE
-        WHEN er_medio >= q3 THEN '🥇 Mejor día'
-        WHEN er_medio >= q2 THEN '🥈 Buen día'
-        ELSE '⚠️ Evitar'
+        WHEN er_medio >= q3 THEN 'Mejor dia'
+        WHEN er_medio >= q2 THEN 'Buen dia'
+        ELSE 'Evitar'
     END AS recomendacion
 FROM (
     SELECT
