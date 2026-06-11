@@ -1,4 +1,4 @@
-# 🗃️ SQL Analytics — TikTok & Instagram
+# SQL Analytics — TikTok & Instagram
 
 > Análisis de métricas de redes sociales usando **SQL puro** sobre SQLite · @aroaxinping · Feb–Mar 2026
 
@@ -24,14 +24,14 @@ social_media.db  (SQLite)
 
 ## Queries SQL — por nivel de complejidad
 
-### 📁 `queries/01_exploracion_basica.sql`
+### `queries/01_exploracion_basica.sql`
 Fundamentos de SQL aplicados a social media analytics:
 - `GROUP BY` + `HAVING` — rendimiento por temática (filtrando temas con ≥2 posts)
 - `ORDER BY` con múltiples criterios
 - Aggregations: `COUNT`, `SUM`, `AVG`, `MAX`, `ROUND`
 - Análisis de franja horaria y día de la semana
 
-### 📁 `queries/02_window_functions.sql`
+### `queries/02_window_functions.sql`
 Window functions sobre datos de rendimiento por post:
 - `RANK()` y `ROW_NUMBER()` — ranking de posts y top N por categoría
 - `PARTITION BY` — top 3 reels por temática independientemente
@@ -40,7 +40,7 @@ Window functions sobre datos de rendimiento por post:
 - Media móvil 7 días: `AVG() OVER (ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)`
 - Percentil calculado con window function
 
-### 📁 `queries/03_ctes_subqueries.sql`
+### `queries/03_ctes_subqueries.sql`
 CTEs y subqueries para análisis más complejos:
 - CTE simple — filtrar posts que superan la media en múltiples métricas a la vez
 - CTEs encadenadas — clasificar en tiers (Top 20% / Mid 50% / Bottom 30%) y agregar por tier
@@ -48,7 +48,7 @@ CTEs y subqueries para análisis más complejos:
 - Subquery correlacionada — comparar cada post con la media de su propia temática
 - Tabla derivada en `FROM`
 
-### 📁 `queries/04_cross_platform.sql`
+### `queries/04_cross_platform.sql`
 Análisis comparativo TikTok vs Instagram:
 - `UNION ALL` — tabla unificada normalizada de ambas plataformas
 - KPIs medios por plataforma en una sola query
